@@ -7,11 +7,10 @@ import LoadingComponent from "../Alert/LoadingComponent";
 const PublicPosts = () => {
   // //! redux store
   const dispatch = useDispatch();
-  const { posts, error, loading, success } = useSelector(
+  const { posts, error, loading } = useSelector(
     (state) => state?.posts
   );
 
-  const { userAuth } = useSelector((state) => state?.users);
   // dispatch
   useEffect(() => {
     dispatch(fetchPublicPostsAction());

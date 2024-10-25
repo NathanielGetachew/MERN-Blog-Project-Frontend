@@ -6,7 +6,6 @@ import {updatePostAction} from "../HomePage/Redux/Slices/Posts/PostSlice ";
 import LoadingComponent from "../Alert/LoadingComponent";
 import SuccessMsg from "../Alert/SuccessMsg";
 import ErrorMsg from "../Alert/ErrorMessage";
-import { ImFeed } from "react-icons/im";
 import { useParams } from "react-router-dom";
 
 const UpdatePost = () => {
@@ -19,8 +18,7 @@ const UpdatePost = () => {
 
   // fetch categories
   const dispatch = useDispatch();
-  //! Error Message
-  const [errors, setErrors] = useState({});
+  
   // get data from store
   const { categories } = useSelector((state) => state?.categories);
 
@@ -31,7 +29,7 @@ const UpdatePost = () => {
     };
   });
   // get post from the store
-  const { post, error, loading, success } = useSelector(
+  const { error, loading, success } = useSelector(
     (state) => state?.posts
   );
 
@@ -47,14 +45,14 @@ const UpdatePost = () => {
     content: "",
   });
   //1. validate form
-  const validateForm = (Data) => {
-    let errors = {};
-    if (!Data.title) errors.title = "Title is required";
-    if (!Data.image) errors.image = "Image is required";
-    if (!Data.category) errors.category = "Category is required";
-    if (!Data.content) errors.content = "Content is required";
-    return errors;
-  };
+  // const validateForm = (Data) => {
+  //   let errors = {};
+  //   if (!Data.title) errors.title = "Title is required";
+  //   if (!Data.image) errors.image = "Image is required";
+  //   if (!Data.category) errors.category = "Category is required";
+  //   if (!Data.content) errors.content = "Content is required";
+  //   return errors;
+  // };
  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

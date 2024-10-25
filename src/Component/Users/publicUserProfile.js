@@ -24,7 +24,7 @@ export default function PublicUserProfile() {
     dispatch(publicProfileAction(userId));
   }, [userId, dispatch]);
 
-  const { user, loading, error, profile } = useSelector(
+  const { user, profile } = useSelector(
     (state) => state?.users
   );
   //! Get all the users the login user has blocked

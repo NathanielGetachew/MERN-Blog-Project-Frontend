@@ -2,7 +2,7 @@ import { AiFillCamera } from "react-icons/ai";
 import { ExclamationTriangleIcon } from "@heroicons/react/20/solid";
 
 import {
-  sendAccVerificationEmailAction,
+  
   privateProfileAction,
   AccVerificationEmailAction,
 } from "../HomePage/Redux/Slices/Users/usersSlice";
@@ -21,7 +21,7 @@ export default function PrivateUserProfile() {
     dispatch(privateProfileAction());
   }, [dispatch]);
 
-  const { users, loading, error, profile, userAuth, isEmailSent } = useSelector(
+  const { profile, userAuth, isEmailSent } = useSelector(
     (state) => state?.users
   );
    // ! Send acc verification email handler

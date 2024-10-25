@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Select from "react-select";
-import { fetchCategoriesAction } from "../HomePage/Redux/Slices/Categories/category Slice";
 import LoadingComponent from "../Alert/LoadingComponent";
 import SuccessMsg from "../Alert/SuccessMsg";
 import ErrorMsg from "../Alert/ErrorMessage";
-import { ImFeed } from "react-icons/im";
 import { uploadProfileImageAction } from "../HomePage/Redux/Slices/Users/usersSlice";
 
 const UploadProfileImage = () => {
@@ -30,7 +27,7 @@ const UploadProfileImage = () => {
   };
   //2. a handleBlur
   const handleBlur = (e) => {
-    const { name, value } = e.target;
+    const { name } = e.target;
     const formErrors = validateForm(formData);
     setErrors({ ...errors, [name]: formErrors[name] });
   };

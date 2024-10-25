@@ -6,11 +6,11 @@ import Login from "./Component/Users/Login";
 import PublicNavBar from "./Component/Navbar/PublicNavBar";
 import PrivateNavbar from "./Component/Navbar/PrivateNavbar";
 import ProtectedRoute from "./AuthRoute/protectedRoute";
-import PublicPosts from "./Component/Posts/PublicPosts";
+
 import AddPost from "./Component/Posts/AddPost";
 import PostDetails from "./Component/Posts/PostDetails";
 import PostsLists from "./Component/Posts/PostsLists";
-import UpdatePost from "./Component/Posts/UpdatePosts";
+
 import PublicUserProfile from "./Component/Users/publicUserProfile";
 import PrivateUserProfile from "./Component/Users/PrivateUserProfile";
 import UploadCoverImage from "./Component/Users/UploadCoverImage";

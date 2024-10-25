@@ -6,7 +6,6 @@ import { addPostActionAction } from "../HomePage/Redux/Slices/Posts/PostSlice ";
 import LoadingComponent from "../Alert/LoadingComponent";
 import SuccessMsg from "../Alert/SuccessMsg";
 import ErrorMsg from "../Alert/ErrorMessage";
-import { ImFeed } from "react-icons/im";
 
 
 const AddPost = () => {
@@ -24,7 +23,7 @@ const AddPost = () => {
     };
   });
 // get post from the store
-const {post,error,loading, success} = useSelector((state)=> state?.posts);
+const {error,loading, success} = useSelector((state)=> state?.posts);
 
 
   useEffect(()=>{
@@ -49,7 +48,7 @@ const {post,error,loading, success} = useSelector((state)=> state?.posts);
     }
   //2. a handleBlur
   const handleBlur  = (e) =>{
-const {name,value} = e.target;
+const {name} = e.target;
 const formErrors = validateForm(formData)
 setErrors({...errors, [name]: formErrors[name]})
 }

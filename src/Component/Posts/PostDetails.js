@@ -2,9 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { deletePostsAction, getPostAction, postViewCountAction } from "../HomePage/Redux/Slices/Posts/PostSlice ";
-import LoadingComponent from "../Alert/LoadingComponent";
-import ErrorMsg from "../Alert/ErrorMessage";
-import PostStats from "./PostStats";
+;import PostStats from "./PostStats";
 import calculateReadingtime from "../../utils/calculateReadingTime";
 import AddComment from "../Comments/AddComment";
 
@@ -12,7 +10,7 @@ const PostDetails = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch();
  //! redux store
-const { posts, error, loading, success } = useSelector(
+const { posts, success } = useSelector(
   (state) => state?.posts
 );
 //! GET THE LOGIN USER

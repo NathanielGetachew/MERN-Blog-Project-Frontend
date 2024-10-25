@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import CommentsList from "./CommentsList";
 import { useDispatch, useSelector } from "react-redux";
 import { createCommentAction } from "../HomePage/Redux/Slices/Comments/commentsSlice";
-import PostDetails from "../Posts/PostDetails";
 
 
 const AddComment = ( {postId,comments}) => {

@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  fetchPrivatePostsAction,
-  fetchPublicPostsAction,
-} from "../HomePage/Redux/Slices/Posts/PostSlice ";
+  fetchPrivatePostsAction} from "../HomePage/Redux/Slices/Posts/PostSlice ";
 import { Link } from "react-router-dom";
 import LoadingComponent from "../Alert/LoadingComponent";
 import { fetchCategoriesAction } from "../HomePage/Redux/Slices/Categories/category Slice";
@@ -11,11 +9,11 @@ import { fetchCategoriesAction } from "../HomePage/Redux/Slices/Categories/categ
 const PostsLists = () => {
   // //! redux store
   const dispatch = useDispatch();
-  const { posts, error, loading, success } = useSelector(
+  const { posts, error, loading } = useSelector(
     (state) => state?.posts
   );
 
-  const { userAuth } = useSelector((state) => state?.users);
+ 
   // pagination/search states
   const [searchTerm, setSearchTerm] = useState("");
   const [page, setPage] = useState(1);

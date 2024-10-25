@@ -3,7 +3,6 @@ import { AiOutlineMail } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { forgotPasswordAction } from "../HomePage/Redux/Slices/Users/usersSlice";
 import LoadingComponent from "../Alert/LoadingComponent";
-import SuccessMsg from "../Alert/SuccessMsg";
 
 const PasswordResetRequest = () => {
 

@@ -10,8 +10,6 @@ import ErrorMsg from "../Alert/ErrorMessage";
 
 
 const UpdateUser = () => {
-// get the reset token from the params
-const {token} = useParams();
 
 //! Dispatch Instance
 const dispatch = useDispatch();
