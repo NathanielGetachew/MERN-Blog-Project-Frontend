@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { deletePostsAction, getPostAction, postViewCountAction } from "../HomePage/Redux/Slices/Posts/PostSlice ";
-;import PostStats from "./PostStats";
+import PostStats from "./PostStats";
 import calculateReadingtime from "../../utils/calculateReadingTime";
 import AddComment from "../Comments/AddComment";
 
